@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products & Services - Allibiya Gases</title>
+    <meta name="description" content="Explore our comprehensive range of industrial, medical, and specialty gases. Allibiya Gases provides high-quality gas solutions for various applications.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-[Inter]">
+    <!-- Header -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="assets/images/logo.png" alt="Allibiya Gases Logo" class="h-12">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-800 hover:text-blue-600 transition">Home</a>
+                    <a href="about.html" class="text-gray-800 hover:text-blue-600 transition">About Us</a>
+                    <a href="products.html" class="text-blue-600 font-medium">Products & Services</a>
+                    <a href="industries.html" class="text-gray-800 hover:text-blue-600 transition">Industries</a>
+                    <a href="news.html" class="text-gray-800 hover:text-blue-600 transition">News</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-blue-600 transition">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button data-mobile-menu-button class="md:hidden text-gray-800">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div data-mobile-menu class="mobile-menu hidden md:hidden">
+                <div class="flex flex-col space-y-4 py-4">
+                    <a href="index.html" class="text-gray-800 hover:text-blue-600 transition">Home</a>
+                    <a href="about.html" class="text-gray-800 hover:text-blue-600 transition">About Us</a>
+                    <a href="products.html" class="text-blue-600 font-medium">Products & Services</a>
+                    <a href="industries.html" class="text-gray-800 hover:text-blue-600 transition">Industries</a>
+                    <a href="news.html" class="text-gray-800 hover:text-blue-600 transition">News</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-blue-600 transition">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-slide-left">Our Products & Services</h1>
+                <p class="text-xl animate-slide-right">Comprehensive gas solutions tailored to your industry needs. Quality, safety, and reliability in every delivery.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <!-- Product Categories -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="category-btn active" data-category="all">All Products</button>
+                <button class="category-btn" data-category="industrial">Industrial Gases</button>
+                <button class="category-btn" data-category="medical">Medical Gases</button>
+                <button class="category-btn" data-category="specialty">Specialty Gases</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Industrial Oxygen -->
+                <div class="product-card" data-category="industrial">
+                    <img src="assets/images/industrial-oxygen.jpg" alt="Industrial Oxygen Cylinder" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Industrial Oxygen</h3>
+                        <p class="text-gray-600 mb-4">High-purity oxygen for metal cutting, welding, and chemical processes.</p>
+                        <button onclick="openProductModal('industrial-oxygen')" class="text-blue-600 hover:text-blue-700">Read More →</button>
+                    </div>
+                </div>
+
+                <!-- Nitrogen -->
+                <div class="product-card" data-category="industrial">
+                    <img src="assets/images/nitrogen.jpg" alt="Nitrogen Gas Cylinder" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Nitrogen (N2)</h3>
+                        <p class="text-gray-600 mb-4">Essential for food preservation, electronics, and blanketing applications.</p>
+                        <button onclick="openProductModal('nitrogen')" class="text-blue-600 hover:text-blue-700">Read More →</button>
+                    </div>
+                </div>
+
+                <!-- Argon -->
+                <div class="product-card" data-category="industrial">
+                    <img src="assets/images/argon.jpg" alt="Argon Gas Cylinder" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Argon</h3>
+                        <p class="text-gray-600 mb-4">Essential for welding and metal fabrication processes.</p>
+                        <button onclick="openProductModal('argon')" class="text-blue-600 hover:text-blue-700">Read More →</button>
+                    </div>
+                </div>
+
+                <!-- Carbon Dioxide -->
+                <div class="product-card" data-category="industrial">
+                    <img src="assets/images/carbon-dioxide.jpg" alt="Carbon Dioxide Cylinder" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Carbon Dioxide (CO2)</h3>
+                        <p class="text-gray-600 mb-4">Food-grade CO2 for beverage carbonation and industrial applications.</p>
+                        <button onclick="openProductModal('carbon-dioxide')" class="text-blue-600 hover:text-blue-700">Read More →</button>
+                    </div>
+                </div>
+
+                <!-- Acetylene -->
+                <div class="product-card" data-category="industrial">
+                    <img src="assets/images/acetylene.jpg" alt="Acetylene Gas Cylinder" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Acetylene</h3>
+                        <p class="text-gray-600 mb-4">High-purity acetylene for welding and cutting applications.</p>
+                        <button onclick="openProductModal('acetylene')" class="text-blue-600 hover:text-blue-700">Read More →</button>
+                    </div>
+                </div>
+
+                <!-- Helium -->
+                <div class="product-card" data-category="specialty">
+                    <img src="assets/images/helium.jpg" alt="Helium Gas Cylinder" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Helium</h3>
+                        <p class="text-gray-600 mb-4">High-purity helium for balloons, diving, and leak detection.</p>
+                        <button onclick="openProductModal('helium')" class="text-blue-600 hover:text-blue-700">Read More →</button>
+                    </div>
+                </div>
+
+                <!-- Medical Oxygen -->
+                <div class="product-card" data-category="medical">
+                    <img src="assets/images/medical-oxygen.jpg" alt="Medical Oxygen Cylinder" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Medical Oxygen</h3>
+                        <p class="text-gray-600 mb-4">High-purity medical oxygen for healthcare facilities and emergency services.</p>
+                        <button onclick="openProductModal('medical-oxygen')" class="text-blue-600 hover:text-blue-700">Read More →</button>
+                    </div>
+                </div>
+
+                <!-- Nitrous Oxide -->
+                <div class="product-card" data-category="medical">
+                    <img src="assets/images/nitrous-oxide.jpg" alt="Nitrous Oxide Cylinder" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Nitrous Oxide</h3>
+                        <p class="text-gray-600 mb-4">Medical-grade nitrous oxide for anesthesia and pain management.</p>
+                        <button onclick="openProductModal('nitrous-oxide')" class="text-blue-600 hover:text-blue-700">Read More →</button>
+                    </div>
+                </div>
+
+                <!-- Specialty Gases -->
+                <div class="product-card" data-category="specialty">
+                    <img src="assets/images/specialty-gases.jpg" alt="Specialty Gas Cylinders" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Specialty Gases</h3>
+                        <p class="text-gray-600 mb-4">High-purity gases and custom mixtures for laboratories and research.</p>
+                        <button onclick="openProductModal('specialty-gases')" class="text-blue-600 hover:text-blue-700">Read More →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-truck text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Gas Delivery</h3>
+                    <p class="text-gray-600">Regular and emergency delivery services across Libya.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Equipment Installation</h3>
+                    <p class="text-gray-600">Professional installation and maintenance of gas equipment.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-flask text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Custom Mixing</h3>
+                    <p class="text-gray-600">Specialized gas mixtures for your specific requirements.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-md text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Technical Support</h3>
+                    <p class="text-gray-600">Expert consultation and 24/7 technical assistance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Information -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="bg-blue-50 rounded-lg p-8">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-2xl font-bold mb-6 text-center">Safety First</h2>
+                    <p class="text-gray-600 mb-6 text-center">We prioritize safety in all our operations. Our products come with comprehensive safety documentation and handling instructions.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <a href="#" class="flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                            <i class="fas fa-file-pdf text-red-500 text-2xl mr-4"></i>
+                            <div>
+                                <h3 class="font-semibold">Safety Data Sheets</h3>
+                                <p class="text-sm text-gray-600">Download product safety information</p>
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                            <i class="fas fa-video text-blue-500 text-2xl mr-4"></i>
+                            <div>
+                                <h3 class="font-semibold">Safety Training Videos</h3>
+                                <p class="text-sm text-gray-600">Watch handling instructions</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="assets/images/logo-white.png" alt="Allibiya Gases Logo" class="h-12 mb-4">
+                    <p class="text-gray-400">Leading provider of industrial, medical, and specialty gases in Libya.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white transition">Products</a></li>
+                        <li><a href="industries.html" class="text-gray-400 hover:text-white transition">Industries</a></li>
+                        <li><a href="news.html" class="text-gray-400 hover:text-white transition">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Tripoli, Libya</li>
+                        <li><i class="fas fa-phone mr-2"></i> +218 91-XXXXXXX</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@allibiya-gases.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Allibiya Gases. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modals -->
+    <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8 max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-start mb-6">
+                <h2 id="modal-title" class="text-2xl font-bold"></h2>
+                <button onclick="closeProductModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div id="modal-content" class="prose max-w-none">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+            <div class="mt-8 flex justify-end">
+                <a href="contact.html#quote" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">
+                    Request Quote
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+    <script>
+    const productData = {
+        'industrial-oxygen': {
+            title: "Industrial Oxygen",
+            content: `
+                <h3>Industrial Oxygen Solutions</h3>
+                <p>Our industrial oxygen is essential for various manufacturing and processing applications:</p>
+                <ul>
+                    <li>Metal cutting and welding</li>
+                    <li>Chemical processing</li>
+                    <li>Waste treatment</li>
+                    <li>Glass manufacturing</li>
+                </ul>
+                <p>Available in various cylinder sizes and bulk quantities to meet your production needs.</p>
+            `
+        },
+        'nitrogen': {
+            title: "Nitrogen (N2)",
+            content: `
+                <h3>Nitrogen Solutions</h3>
+                <p>High-purity nitrogen for industrial applications:</p>
+                <ul>
+                    <li>Food preservation and packaging</li>
+                    <li>Electronics manufacturing</li>
+                    <li>Chemical blanketing</li>
+                    <li>Metal treatment</li>
+                </ul>
+                <p>Delivered in various cylinder sizes and bulk quantities.</p>
+            `
+        },
+        'argon': {
+            title: "Argon",
+            content: `
+                <h3>Argon Solutions</h3>
+                <p>High-purity argon for industrial applications:</p>
+                <ul>
+                    <li>Welding and metal fabrication</li>
+                    <li>Heat treatment</li>
+                    <li>Semiconductor manufacturing</li>
+                    <li>Laboratory applications</li>
+                </ul>
+                <p>Available in various purity grades and cylinder sizes.</p>
+            `
+        },
+        'carbon-dioxide': {
+            title: "Carbon Dioxide (CO2)",
+            content: `
+                <h3>Carbon Dioxide Solutions</h3>
+                <p>Food-grade CO2 for various applications:</p>
+                <ul>
+                    <li>Beverage carbonation</li>
+                    <li>Food preservation</li>
+                    <li>Water treatment</li>
+                    <li>Fire suppression</li>
+                </ul>
+                <p>Available in liquid and gaseous forms.</p>
+            `
+        },
+        'acetylene': {
+            title: "Acetylene",
+            content: `
+                <h3>Acetylene Solutions</h3>
+                <p>High-purity acetylene for industrial applications:</p>
+                <ul>
+                    <li>Welding and cutting</li>
+                    <li>Metal fabrication</li>
+                    <li>Chemical synthesis</li>
+                    <li>Flame heating</li>
+                </ul>
+                <p>Delivered in specialized cylinders with safety features.</p>
+            `
+        },
+        'helium': {
+            title: "Helium",
+            content: `
+                <h3>Helium Solutions</h3>
+                <p>High-purity helium for various applications:</p>
+                <ul>
+                    <li>Balloon inflation</li>
+                    <li>Diving gas mixtures</li>
+                    <li>Leak detection</li>
+                    <li>Laboratory use</li>
+                </ul>
+                <p>Available in various purity grades and cylinder sizes.</p>
+            `
+        },
+        'medical-oxygen': {
+            title: "Medical Oxygen",
+            content: `
+                <h3>Medical Oxygen Solutions</h3>
+                <p>High-purity medical oxygen for healthcare facilities:</p>
+                <ul>
+                    <li>Respiratory therapy</li>
+                    <li>Emergency services</li>
+                    <li>Hospital applications</li>
+                    <li>Home healthcare</li>
+                </ul>
+                <p>Compliant with international medical standards and regulations.</p>
+            `
+        },
+        'nitrous-oxide': {
+            title: "Nitrous Oxide",
+            content: `
+                <h3>Nitrous Oxide Solutions</h3>
+                <p>Medical-grade nitrous oxide for healthcare applications:</p>
+                <ul>
+                    <li>Anesthesia</li>
+                    <li>Pain management</li>
+                    <li>Dental procedures</li>
+                    <li>Emergency care</li>
+                </ul>
+                <p>Compliant with international medical standards and regulations.</p>
+            `
+        },
+        'specialty-gases': {
+            title: "Specialty Gases",
+            content: `
+                <h3>Specialty Gas Solutions</h3>
+                <p>High-purity gases and custom mixtures for specialized applications:</p>
+                <ul>
+                    <li>Laboratory gases</li>
+                    <li>Calibration gases</li>
+                    <li>Custom gas mixtures</li>
+                    <li>Research applications</li>
+                </ul>
+                <p>Tailored solutions to meet your specific requirements.</p>
+            `
+        }
+    };
+
+    function openProductModal(category) {
+        const modal = document.getElementById('product-modal');
+        const title = document.getElementById('modal-title');
+        const content = document.getElementById('modal-content');
+        
+        title.textContent = productData[category].title;
+        content.innerHTML = productData[category].content;
+        
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeProductModal() {
+        const modal = document.getElementById('product-modal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+    }
+
+    // Close modal when clicking outside
+    document.getElementById('product-modal').addEventListener('click', (e) => {
+        if (e.target === e.currentTarget) {
+            closeProductModal();
+        }
+    });
+    </script>
+</body>
+</html> 
