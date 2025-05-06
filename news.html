@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Updates - Allibiya Gases</title>
+    <meta name="description" content="Stay updated with the latest news, announcements, and industry insights from Allibiya Gases. Read about our latest developments and achievements.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-[Inter]">
+    <!-- Header -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="assets/images/logo.png" alt="Allibiya Gases Logo" class="h-12">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-800 hover:text-blue-600 transition">Home</a>
+                    <a href="about.html" class="text-gray-800 hover:text-blue-600 transition">About Us</a>
+                    <a href="products.html" class="text-gray-800 hover:text-blue-600 transition">Products & Services</a>
+                    <a href="industries.html" class="text-gray-800 hover:text-blue-600 transition">Industries</a>
+                    <a href="news.html" class="text-blue-600 font-medium">News</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-blue-600 transition">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button data-mobile-menu-button class="md:hidden text-gray-800">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div data-mobile-menu class="mobile-menu hidden md:hidden">
+                <div class="flex flex-col space-y-4 py-4">
+                    <a href="index.html" class="text-gray-800 hover:text-blue-600 transition">Home</a>
+                    <a href="about.html" class="text-gray-800 hover:text-blue-600 transition">About Us</a>
+                    <a href="products.html" class="text-gray-800 hover:text-blue-600 transition">Products & Services</a>
+                    <a href="industries.html" class="text-gray-800 hover:text-blue-600 transition">Industries</a>
+                    <a href="news.html" class="text-blue-600 font-medium">News</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-blue-600 transition">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-slide-left">News & Updates</h1>
+                <p class="text-xl animate-slide-right">Stay informed about our latest developments and industry insights</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Grid -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- News Item 1 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="relative">
+                        <img src="assets/images/news-1.jpg" alt="New Facility Opening" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+                            Company News
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">March 15, 2024</div>
+                        <h3 class="text-xl font-semibold mb-3">New Production Facility Opening in Tripoli</h3>
+                        <p class="text-gray-600 mb-4">We're excited to announce the opening of our new state-of-the-art production facility, expanding our capacity to serve our growing customer base.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- News Item 2 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="relative">
+                        <img src="assets/images/news-2.jpg" alt="Safety Certification" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm">
+                            Achievement
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">March 10, 2024</div>
+                        <h3 class="text-xl font-semibold mb-3">ISO 45001 Safety Certification Achieved</h3>
+                        <p class="text-gray-600 mb-4">Allibiya Gases has been awarded the ISO 45001 certification, recognizing our commitment to workplace safety and health management.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- News Item 3 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="relative">
+                        <img src="assets/images/news-3.jpg" alt="Industry Partnership" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm">
+                            Partnership
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">March 5, 2024</div>
+                        <h3 class="text-xl font-semibold mb-3">Strategic Partnership with Leading Healthcare Provider</h3>
+                        <p class="text-gray-600 mb-4">We're proud to announce our new partnership with a major healthcare provider to enhance medical gas supply across Libya.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- News Item 4 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="relative">
+                        <img src="assets/images/news-4.jpg" alt="Technology Investment" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm">
+                            Innovation
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">February 28, 2024</div>
+                        <h3 class="text-xl font-semibold mb-3">Major Investment in Advanced Gas Technology</h3>
+                        <p class="text-gray-600 mb-4">Allibiya Gases announces significant investment in cutting-edge gas production and monitoring technology.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- News Item 5 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="relative">
+                        <img src="assets/images/news-5.jpg" alt="Community Initiative" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm">
+                            Community
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">February 20, 2024</div>
+                        <h3 class="text-xl font-semibold mb-3">New Community Safety Initiative Launched</h3>
+                        <p class="text-gray-600 mb-4">We're launching a new initiative to promote gas safety awareness in local communities across Libya.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- News Item 6 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="relative">
+                        <img src="assets/images/news-6.jpg" alt="Employee Training" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 left-4 bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">
+                            Training
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">February 15, 2024</div>
+                        <h3 class="text-xl font-semibold mb-3">Advanced Training Program for Employees</h3>
+                        <p class="text-gray-600 mb-4">Our employees complete advanced technical training program, enhancing our service capabilities.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6">Stay Updated</h2>
+                <p class="text-gray-600 mb-8">Subscribe to our newsletter for the latest news and updates</p>
+                <form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg border focus:outline-none focus:border-blue-500">
+                    <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="assets/images/logo-white.png" alt="Allibiya Gases Logo" class="h-12 mb-4">
+                    <p class="text-gray-400">Leading provider of industrial, medical, and specialty gases in Libya.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white transition">Products</a></li>
+                        <li><a href="industries.html" class="text-gray-400 hover:text-white transition">Industries</a></li>
+                        <li><a href="news.html" class="text-gray-400 hover:text-white transition">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Tripoli, Libya</li>
+                        <li><i class="fas fa-phone mr-2"></i> +218 91-XXXXXXX</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@allibiya-gases.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Allibiya Gases. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+</html> 
